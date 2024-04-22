@@ -1,0 +1,254 @@
+/* RESET */
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* END RESET */
+
+/* ROOT Variable */
+:root{
+   /* --color */
+
+    --color-primaray:#219F95;
+    --color-secondary:#AFCEDD;
+    --color-white:#fff;
+    --color-black: #1E1E1E;
+    --color-text-primaray:#000;
+    --color-text-secondary: #234894;
+    --color-text-light:#696969;
+
+/*  --font */
+
+    --font-h1-L : 2.2rem;
+    --font-h1-M : 1.7rem;
+    --font-h1-S : 1.2rem;
+    --font-h2-L : 1.8rem;
+    --font-h2-M : 1.3rem;
+    --font-h2-S : 0.8rem;
+    --font-h3-L : 1.6rem;
+    --font-h3-M : 1.1rem;
+    --font-h3-S : 0.6rem;
+    --font-h4-L : 1.2rem;
+    --font-h4-M : 0.9rem;
+    --font-h4-S : 0.4rem;
+
+
+}
+
+h1,h2,h3{
+    color: var( --color-text-primaray);
+}
+body{
+    font-family: "Vazirmatn";
+  }
+
+ /* END  ROOT Variable */
+
+/* FONTS */
+html{
+    font-size: 62.5%;
+}
+
+h1{
+    font-size: var(--font-h1-S);
+}
+h2{
+    font-size: var(--font-h2-S);
+}
+h3{
+    font-size: var(--font-h3-S);
+}
+h4{
+    font-size: var(--font-h4-S);
+}
+ h1{
+    margin: 2rem;
+ }
+ h2,h3,h4{
+    margin-right:2rem;
+ }
+ 
+@media screen and (min-width:768px) and (max-width:1024px) {
+    h1{ font-size:var(--font-h1-M);
+        font-weight: 700;}
+    h2{ font-size: var(--font-h2-M);
+        font-weight: 700;}
+    h3{ font-size: var(--font-h3-M);
+        font-weight: 600;}
+    h4{ font-size: var(--font-h4-M);
+        font-weight: 500;}
+}
+
+@media screen and (min-width:1024px) {
+    h1{ font-size: var(--font-h1-L);
+        font-weight: 900;}
+    h2{ font-size:  var(--font-h2-L);
+        font-weight: 900;}
+    h3{ font-size: var(--font-h3-L);;
+        font-weight: 600;}
+    h4{ font-size:  var(--font-h4-L);;
+        font-weight: 500;}
+}
+/* END FONTS */
+/* BODY */
+
+body{
+
+    max-width: 1336px;
+    margin: 0 auto;
+}
+
+
+/* Buttons */
+.btn{
+    cursor: pointer;
+    outline: 0;
+    border:0;
+    border-radius: 8px;
+    padding: 2rem 2rem;
+     margin-top: 6rem ; 
+    margin-left: 2rem;
+    /* max-height: 50px; */
+    text-align: center;
+    white-space: nowrap;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: var(--color-primaray);
+    color: #fff;
+    /* font-family: "Vazirmatn */
+}
+
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+  .btn{
+    font-size:var(--font-h3-M) ;
+  }
+}
+
+@media screen and (min-width:1024px) {
+    .btn{
+        font-size:var(--font-h3-L) ;
+      }
+}
+
+/* END Buttons */
+
+/* Card  */
+.card{
+    max-width: 400px;
+    max-height: 400px;
+    /* border:1px solid rgb(255, 111, 0); */
+}
+
+.card__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border:1px solid blue; */
+    max-width: 400px;
+}
+
+.card__body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*  END Card */
+/* Panel */
+.panel {
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-between;
+    align-items: center;
+    align-items: stretch;
+    /* border: 1px solid red; */
+    padding: 0;
+    margin: 2rem;
+    max-width:180px;
+    height: 4rem;
+}
+.panel__box {
+
+    background-color: var(--color-white);
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.panel__image{
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+.panel__text--name{
+    font-size:var(--font-h2-S);
+    margin: 0.2rem;
+}
+
+.text--primaray{
+    font-weight: 700;
+    color: var(--color-text-primaray);
+}
+
+.text--secondary{
+    font-weight: 600;
+    color: var(--color-text-secondary);
+}
+.text--light{
+    font-weight: 600;
+    color: var(--color-text-light);
+}
+ /* .header__text , .section--body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1.2rem;
+} */
+.header__Text--Date{
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    margin: 3rem ;
+} 
+
+ 
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .panel__text--name{
+      font-size:var(--font-h2-M) ;
+      margin: 0.4rem;
+    }
+  }
+  
+  @media screen and (min-width:1024px) {
+      .panel__text--name{
+          font-size:var(--font-h2-L) ;
+          margin: 0.6rem;
+        }
+  }
+  
+/* END Panel */
+/* Section */
+.section{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .section{
+        grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media screen and (min-width:1024px) {
+    .section{
+        grid-template-columns: 1fr 1fr 1fr;
+        }
+  }
+  /* END Section */
